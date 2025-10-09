@@ -216,14 +216,6 @@
   text-align: center;
 }
 
-.tutor-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap-reverse; /* ✅ This keeps image on right even on wrap */
-}
-
 .tutor-info {
   flex: 1 1 60%;
   font-size: 1rem;
@@ -234,6 +226,18 @@
   margin: 0.3rem 0 0.7rem 0;
   font-family: 'Montserrat', sans-serif;
   color: #0f5489;
+}
+
+.tutor-card {
+  display: flex;
+  justify-content: space-between; /* pushes image to the right */
+  align-items: flex-start;        /* keeps image aligned to top */
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 1000px;
+  margin: 40px auto;
 }
 
 .tutor-photo {
