@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms, Refund & Privacy Policy - ssdblog.online</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #222222;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #dddddd;
+            margin: 30px 0;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>Terms, Refund & Privacy Policy</h1>
+    <p><strong>Website:</strong> ssdblog.online<br>
+    <strong>Contact Email:</strong> snehal.pdhamdar@gmail.com<br>
+    <strong>Last Updated:</strong> [Insert Date]</p>
+
+    <hr>
+
+    <h2>1. Terms & Conditions</h2>
+    <p>Welcome to <strong>ssdblog.online</strong> (“we”, “us”, or “our”). By accessing or using this website, you agree to comply with and be bound by the following Terms & Conditions. If you do not agree, please discontinue use of the website.</p>
+
+    <h3>1.1 Use of Website</h3>
+    <p>You agree to use the website only for lawful purposes. Any attempt to hack, disrupt, or misuse the platform is prohibited.</p>
+
+    <h3>1.2 Intellectual Property</h3>
+    <p>All content on this website, including text, images, logos, and layouts, is the property of ssdblog.online unless otherwise stated. You may not copy, distribute, or reproduce content without written consent.</p>
+
+    <h3>1.3 Pricing & Services</h3>
+    <p>We offer digital products, courses, or services. All prices displayed are final and subject to change before purchase.</p>
+
+    <h3>1.4 Disclaimer</h3>
+    <p>All content and services are provided “as is” without warranties. We do not guarantee accuracy, completeness, or uninterrupted access.</p>
+
+    <h3>1.5 Limitation of Liability</h3>
+    <p>We are not responsible for any direct or indirect damages arising from the use or inability to use the website.</p>
+
+    <h3>1.6 Changes to Terms</h3>
+    <p>We may update these Terms at any time. Continued use after updates implies acceptance.</p>
+
+    <h3>1.7 Governing Law</h3>
+    <p>These Terms are governed by the laws of India. Disputes shall be handled under the jurisdiction of Nagpur, Maharashtra.</p>
+
+    <hr>
+
+    <h2>2. No Refund Policy</h2>
+    <p>By purchasing any product, course, or service from <strong>ssdblog.online</strong>, you acknowledge and agree that all sales are <strong>final and non-refundable</strong>. No refunds will be issued for:</p>
+    <ul>
+        <li>Change of mind</li>
+        <li>Incorrect purchase</li>
+        <li>Failure to use the product or service</li>
+    </ul>
+    <p>If you face technical issues, contact us at <a href="mailto:snehal.pdhamdar@gmail.com">snehal.pdhamdar@gmail.com</a>. We will assist you, but refunds will not be issued.</p>
+
+    <hr>
+
+    <h2>3. Privacy Policy</h2>
+    <h3>3.1 Information We Collect</h3>
+    <p>We may collect your name, email, and browsing data through cookies or analytics tools.</p>
+
+    <h3>3.2 How We Use Your Information</h3>
+    <ul>
+        <li>To improve website performance</li>
+        <li>To communicate with you</li>
+        <li>To prevent fraud or abuse</li>
+    </ul>
+
+    <h3>3.3 Cookies</h3>
+    <p>We may use cookies to enhance user experience. You may disable them in browser settings.</p>
+
+    <h3>3.4 Data Protection</h3>
+    <p>We take reasonable measures to protect your data but cannot guarantee 100% security.</p>
+
+    <h3>3.5 Data Sharing</h3>
+    <p>We do not sell your data. We may share information only if required by law.</p>
+
+    <h3>3.6 Changes to Policy</h3>
+    <p>We may update this policy when needed. Continued use means you accept the new policy.</p>
+
+    <h3>3.7 Contact</h3>
+    <p>For privacy-related queries, reach us at <a href="mailto:snehal.pdhamdar@gmail.com">snehal.pdhamdar@gmail.com</a>.</p>
+
+</div>
+</body>
+</html>
