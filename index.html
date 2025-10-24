@@ -1,190 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="hi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AWS Solution Architect Career Kickstart</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Register — MySite</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; max-width:600px; margin:auto; }
+    .card { border:1px solid #eee; padding:16px; border-radius:8px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+    input, button { padding:10px; margin:8px 0; width:100%; box-sizing:border-box; }
+    button { cursor:pointer; background:#1a73e8; color:#fff; border:none; border-radius:4px; }
+    .msg { margin-top:12px; color:green; display:none; }
+    .err { margin-top:12px; color:red; display:none; }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>🚀 AWS Solution Architect Career Kickstart</h1>
-    <p class="hook">“Become an AWS Solution Architect — Earn ₹8 LPA+ Even Before Graduation!”</p>
-    <p class="subhook">💡 No coding required. Just Learn Cloud, Get Certified & Land a Dream Job in Top MNCs</p>
-  </header>
+  <div class="card">
+    <h2>Register करें</h2>
+    <form id="regForm">
+      <input id="name" name="name" type="text" placeholder="आपका नाम" required />
+      <input id="email" name="email" type="email" placeholder="आपका ईमेल" required />
+      <input type="hidden" name="source" value="github-pages" />
+      <button id="submitBtn" type="submit">रजिस्टर करें</button>
+    </form>
 
-  <!-- Immediately after header: text + image on the right -->
-  <section class="hero-band">
-    <div class="hero-text">
-      <h3 style="margin-top:0.2rem">Why start with AWS Cloud?</h3>
-      <ul class="stacked-list">
-        <li>🌥️ AWS Cloud is a high-paying, future‑proof career path for tech graduates and freshers.</li>
-        <li>🛡️ No coding experience required — learn fundamentals, get certified, and become job‑ready.</li>
-        <li>🏢 Opportunities across top MNCs like Amazon, Infosys, TCS, Wipro, Accenture and more.</li>
-        <li>💼 Salary outlook: target ₹8 LPA+ for skilled freshers with certification and projects.</li>
-        <li>🔑 Real‑world use cases: migrations, scalable apps, data/AI workloads, and startup launches.</li>
-        <li>📈 Rapid growth path from Cloud Practitioner to Solutions Architect and beyond.</li>
-      </ul>
-    </div>
-    <div class="hero-image">
-      <!-- Use the attached image file path when deploying; update src accordingly -->
-      <img src="image.jpg" alt="Cloud datacenter illustration"/>
-    </div>
-
-  </section>
-
-  <!-- Benefits block (kept concise, complements hero) -->
-  <section class="benefits">
-    <div>
-    <ul>
-      <li>🎯 Built for BCA, B.Sc (IT/CS) and Gen Z learners seeking a cloud career head start.</li>
-      <li>🧪 Hands‑on labs, interview prep, and certification guidance aligned to Cloud Practitioner.</li>
-      <li>🧭 Clear roadmap: fundamentals → hands‑on → certification → projects → placement readiness.</li>
-    </ul>
-
-  </section>
-
-  <!-- Two main cards -->
-  <section class="cards">
-   <!-- Seminar Card -->
-<div class="card">
-  <div class="tag">Seminar: Why AWS?</div>
-  <p style="margin:0.4rem 0 0.2rem 0">
-    🎤 Discover why AWS Cloud is the platform of choice for modern careers.<br />
-    🧑‍💻 Perfect for beginners and college students.
-  </p>
-  <div class="price">Just ₹99</div>
-  <p style="margin:0.2rem 0 0.6rem 0">
-    <br />
-    <small>
-      <a href="policy.html" style="text-decoration:none; color:#0073e6;">
-        See our terms and conditions here
-      </a>
-    </small>
-  </p>
-  <button class="btn" onclick="window.open('https://rzp.io/rzp/iF237bL','_blank')">
-    Enroll now 
-  </button>
-</div>
-
-<!-- Course Card -->
-<div class="card">
-  <div class="tag">Basic AWS Training</div>
-  <p style="margin:0.4rem 0 0.2rem 0">
-    🏆 Learn core AWS services with practical demos, labs, and exam prep for Cloud Practitioner.
-  </p>
-  <div class="price">₹3000 • Lifetime access</div>
-  <button class="btn" onclick="openCourse()">See More</button>
-</div>
-
-<!-- Project Assessment Card -->
-<div class="card">
-  <div class="tag">📝 Project Assessment</div>
-  <p style="margin:0.4rem 0 0.2rem 0">
-    We help you with your AWS project!
-  </p>
-  <button class="btn" onclick="showProjectModal()">See More</button>
-</div>
-
-  </section>
-
-  <!-- Tutor Details Section -->
-  <section class="tutor">
-    <h2 class="tutor-heading">About Myself</h2>
-    <div class="tutor-card">
-      <div class="tutor-info">
-        <h3>Snehal Dhamdar</h3>
-        <p>AWS Certified Solutions Architect • Trainer & Mentor</p>
-        <p>
-          I help students and freshers kickstart their cloud careers with practical AWS training,
-          hands-on labs, certification preparation, and real-world projects.
-        </p>
-        <p>
-          My mission is to simplify cloud concepts for Gen Z learners and empower them to land jobs
-          with confidence.
-        </p>
-        <p><strong>Email:</strong>
-          <a href="mailto:snehal.pdhamdar@gmail.com">snehal.pdhamdar@gmail.com</a>
-        </p>
-      </div>
-      <img src="snehal.jpg" alt="Snehal Dhamdhere Photo" class="tutor-photo" />
-    </div>
-  </section>
-
-
-
-
-  <!-- Modal: Expanded Course Details -->
-  <div id="courseDetails">
-    <div class="modal-card">
-      <h2 style="color:#158dbe;margin-bottom:0.2rem">Basic AWS Training — Full Details</h2>
-      <p style="margin:0.2rem 0 0.8rem 0">Price: ₹3000 • Lifetime access • Self‑paced resources + live doubt support</p>
-
-      <div class="modal-grid">
-        <div>
-          <h3>What’s included</h3>
-          <div class="pill">Hands‑on labs</div>
-          <div class="pill">Exam prep</div>
-          <div class="pill">Project guidance</div>
-          <div class="pill">Interview prep</div>
-          <div class="pill">Lifetime updates</div>
-          <ul class="stacked-list">
-            <li>🚀 Core services: Compute, Storage, Networking, Databases</li>
-            <li>🔒 Security, Identity & Compliance essentials</li>
-            <li>🔄 Billing, Pricing & Support models</li>
-            <li>☁️ Migration patterns and operational best practices</li>
-            <li>💻 Real‑world labs and case studies</li>
-            <li>🏅 Cloud Practitioner certification preparation</li>
-          </ul>
-        </div>
-
-        <div>
-          <h3>Syllabus (Consolidated)</h3>
-          <ul class="stacked-list">
-            <li>Cloud Concepts & Global Infrastructure</li>
-            <li>Identity, Security & Compliance foundations</li>
-            <li>Compute: EC2, Auto Scaling, Elastic Load Balancing, Lambda basics</li>
-            <li>Storage: S3, lifecycle, Glacier; EBS & EFS overview</li>
-            <li>Networking: VPC basics, subnets, routing, security groups</li>
-            <li>Databases: RDS overview, DynamoDB basics</li>
-            <li>Monitoring & Management: CloudWatch, CloudTrail, IAM best practices</li>
-            <li>Billing & Pricing: Free Tier, cost tools, support plans</li>
-            <li>Migration & Use Cases: web apps, data/AI workloads, startup patterns</li>
-            <li>Certification Readiness: exam blueprint, practice, tips</li>
-            <li>Career Guidance: portfolio projects, resume & interview prep</li>
-          </ul>
-        </div>
-      </div>
-
-      <div style="text-align:right;margin-top:1rem">
-        <button class="btn" onclick="closeCourse()">Close</button>
-      </div>
-    </div>
+    <div class="msg" id="successMsg">धन्यवाद! आपका फॉर्म मिल गया — थोड़ी देर में redirect होगा…</div>
+    <div class="err" id="errMsg">कुछ गलती हुई। कृपया बाद में कोशिश करें।</div>
   </div>
 
-<script src="script.js"></script>
+<script>
+document.getElementById('regForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  document.getElementById('errMsg').style.display = 'none';
+  document.getElementById('successMsg').style.display = 'none';
+  const btn = document.getElementById('submitBtn');
+  btn.disabled = true;
+  btn.textContent = 'Submitting...';
 
-  <!-- Modal for Project Assessment Card -->
-<div class="modal-bg" id="project-modal-bg">
-  <div class="modal-content">
-      <button class="modal-close" onclick="hideProjectModal()">&times;</button>
-      <h2 style="color:var(--blue2);">Get Help With Your AWS Project 🚀</h2>
-      <p>Contact: <a href="mailto:snehal.pdhamdar@gmail.com">snehal.pdhamdar@gmail.com</a></p>
-      <p><b>Example AWS Solution Architect Projects:</b></p>
-      <ul style="font-size:1em; color:#1e293b;">
-          <li>Rapid Document Conversion using AWS Lambda and S3</li>
-          <li>Deploying a Windows Virtual Machine with Lightsail/EC2</li>
-          <li>Building a Serverless Web Application (Amplify, Lambda, DynamoDB)</li>
-          <li>Content Recommendation System using SageMaker</li>
-          <li>CI/CD Pipeline using CodePipeline, CodeBuild, GitHub for Microservices App</li>
-          <li>Highly Available Multi-Tier Architecture (VPC, EC2, RDS, S3)</li>
-      </ul>
-      <p>Email us for detailed guidance, project troubleshooting, or to discuss your ideas!</p>
-  </div>
-</div>
+  const form = e.target;
+  const data = new FormData(form);
 
+  try {
+    const res = await fetch('https://formspree.io/f/mnngerba', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: data
+    });
+
+    if (res.ok) {
+      document.getElementById('successMsg').style.display = 'block';
+      setTimeout(() => {
+        window.location.href = '/thankyou.html';
+      }, 1000);
+    } else {
+      const json = await res.json().catch(()=>null);
+      document.getElementById('errMsg').textContent = (json && json.error) ? json.error : 'Submission failed';
+      document.getElementById('errMsg').style.display = 'block';
+      btn.disabled = false;
+      btn.textContent = 'रजिस्टर करें';
+    }
+  } catch (err) {
+    document.getElementById('errMsg').textContent = 'नेटवर्क त्रुटि — कृपया बाद में आज़माएँ';
+    document.getElementById('errMsg').style.display = 'block';
+    btn.disabled = false;
+    btn.textContent = 'रजिस्टर करें';
+  }
+});
+</script>
 </body>
 </html>
-
-
