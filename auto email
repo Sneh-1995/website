@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Registration</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; max-width:600px; margin:auto; }
+    input, button { padding:10px; margin:6px 0; width:100%; box-sizing:border-box; }
+    button { cursor:pointer; }
+  </style>
+</head>
+<body>
+  <h2>Register करें</h2>
+  <form action="https://formspree.io/f/mnngerba" method="POST">
+    <input type="text" name="name" placeholder="आपका नाम" required />
+    <input type="email" name="email" placeholder="आपका ईमेल" required />
+    <input type="hidden" name="source" value="github-pages" />
+    <button type="submit">रजिस्टर करें</button>
+  </form>
+
+  <!-- optional: simple thank-you message shown after redirect (Formspree may show its own) -->
+</body>
+</html>
