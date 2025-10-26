@@ -6,75 +6,11 @@
   <title>AWS Solution Architect Career Kickstart</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* Razorpay Enroll Button Styling */
-    .enroll-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 0.75rem;
-      text-align: center;
-      margin-top: 10px;
-    }
-
-    .terms-link {
-      color: #6b7280;
-      text-decoration: none;
-      font-size: 14px;
-      transition: color 0.2s ease-in-out;
-    }
-
-    .terms-link:hover {
-      color: #2563eb;
-    }
-
-    .rzp-btn {
-      background: linear-gradient(135deg, #0d6efd, #2563eb);
-      color: #fff;
-      font-size: 1rem;
-      font-weight: 600;
-      padding: 14px 36px;
-      border: none;
-      border-radius: 9999px;
-      cursor: pointer;
-      box-shadow: 0 4px 14px rgba(13, 110, 253, 0.3);
-      transition: all 0.25s ease-in-out;
-    }
-
-    .rzp-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(13, 110, 253, 0.45);
-    }
-
-    .rzp-btn:active {
-      transform: translateY(1px);
-      box-shadow: 0 3px 10px rgba(13, 110, 253, 0.3);
-    }
-
-    .rzp-btn:disabled {
-      opacity: 0.7;
-      cursor: not-allowed;
-    }
-
-    @media (max-width: 600px) {
-      .rzp-btn {
-        width: 80%;
-        font-size: 0.95rem;
-        padding: 12px 0;
-      }
-
-      .terms-link {
-        font-size: 13px;
-      }
-    }
-  </style>
 </head>
-
 <body>
   <header>
     <h1>🚀 AWS Solution Architect Career Kickstart</h1>
-    <p class="hook">“Become an AWS Solution Architect — Earn ₹11 LPA+ Even Before Graduation!”</p>
+    <p class="hook">“Become an AWS Solution Architect — Earn ₹11 LPA+ ”</p>
     <p class="subhook">💡 No coding required. Just Learn Cloud, Get Certified & Land a Dream Job in Top MNCs</p>
   </header>
 
@@ -85,7 +21,7 @@
         <li>🌥️ AWS Cloud is a high-paying, future-proof career path for tech graduates and freshers.</li>
         <li>🛡️ No coding experience required — learn fundamentals, get certified, and become job-ready.</li>
         <li>🏢 Opportunities across top MNCs like Amazon, Infosys, TCS, Wipro, Accenture and more.</li>
-        <li>💼 Salary outlook: target ₹8 LPA+ for skilled freshers with certification and projects.</li>
+        <li>💼 Salary outlook: target ₹11 LPA+ for skilled freshers with certification and projects.</li>
         <li>🔑 Real-world use cases: migrations, scalable apps, data/AI workloads, and startup launches.</li>
         <li>📈 Rapid growth path from Cloud Practitioner to Solutions Architect and beyond.</li>
       </ul>
@@ -97,26 +33,21 @@
 
   <section class="benefits">
     <ul>
-      <li>🎯 Built for BCA, any graduate learners seeking a cloud career head start.</li>
+      <li>🎯 Built for BCA, B.Sc (IT/CS) or Any Graduates learners seeking a cloud career head start.</li>
       <li>🧪 Hands-on labs, interview prep, and certification guidance aligned to Cloud Practitioner.</li>
       <li>🧭 Clear roadmap: fundamentals → hands-on → certification → projects → placement readiness.</li>
     </ul>
   </section>
 
   <section class="cards">
-    <!-- ✅ Seminar Card with Razorpay Button -->
     <div class="card">
       <div class="tag">Seminar: Why AWS?</div>
       <p>🎤 Discover why AWS Cloud is the platform of choice for modern careers.</p>
-      <div class="price">Just ₹99</div>
-
-      <div class="enroll-container">
-        <small><a href="policy.html" target="_blank" class="terms-link">See our terms and conditions here</a></small>
-        <button id="rzp-enroll-btn" class="rzp-btn">Enroll now</button>
-      </div>
+      <div class="price">Just ₹99</div></br>
+      <small><a href="policy.html">See our terms and conditions here</a></small></br>
+      <button class="btn" onclick="window.open('https://rzp.io/rzp/iF237bL','_blank')">Enroll now</button>
     </div>
 
-    <!-- Other Course Cards -->
     <div class="card">
       <div class="tag">Basic AWS Training</div>
       <p>🏆 Learn core AWS services with practical demos, labs, and exam prep for Cloud Practitioner.</p>
@@ -145,7 +76,6 @@
     </div>
   </section>
 
-  <!-- Modal Sections -->
   <div id="courseDetails">
     <div class="modal-card">
       <h2>Basic AWS Training — Full Details</h2>
@@ -171,43 +101,6 @@
       </ul>
     </div>
   </div>
-
-  <!-- ✅ Razorpay Button Logic -->
-  <script>
-  (function(){
-    const RAZORPAY_LINK = 'https://rzp.io/rzp/SYipLyPF';
-    const btn = document.getElementById('rzp-enroll-btn');
-
-    btn.addEventListener('click', function() {
-      btn.disabled = true;
-      const originalText = btn.textContent;
-      btn.textContent = 'Opening...';
-
-      // Google Analytics tracking
-      if (typeof gtag === 'function') {
-        gtag('event', 'click', {
-          event_category: 'Payment',
-          event_label: 'Razorpay Enroll ₹99',
-          value: 99
-        });
-      }
-
-      // Meta Pixel tracking
-      if (typeof fbq === 'function') {
-        fbq('track', 'InitiateCheckout', { value: 99, currency: 'INR' });
-      }
-
-      // Open Razorpay payment link
-      window.open(RAZORPAY_LINK, '_blank');
-
-      // Reset button after delay
-      setTimeout(() => {
-        btn.disabled = false;
-        btn.textContent = originalText;
-      }, 2000);
-    });
-  })();
-  </script>
 
   <script src="script.js"></script>
 </body>
