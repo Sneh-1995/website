@@ -1,0 +1,165 @@
+<!--
+Subject: 🚀 Join Our AWS Solution Architect Program — Starting December 13, 2025!
+Preheader: Introductory seminar on 13 Dec 2025 | 8 PM - 9 PM — 16 Dec 2025, live sessions after seminar. Limited seats — Register now.
+-->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SSD Blog Online — AWS Solution Architect Program</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    /* Fallback fonts and responsive helpers */
+    body { margin:0; padding:0; background-color:#f4f6f8; font-family: "Helvetica Neue", Arial, sans-serif; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; }
+    table { border-collapse:collapse; }
+    img { display:block; border:0; outline:none; text-decoration:none; }
+    a { color:#1a73e8; text-decoration:none; }
+    .container { max-width:680px; margin:0 auto; }
+    @media screen and (max-width:600px) {
+      .stack { width:100% !important; display:block !important; }
+      .pad { padding:18px !important; }
+      .h1 { font-size:22px !important; }
+      .h2 { font-size:16px !important; }
+    }
+  </style>
+</head>
+<body>
+  <center style="width:100%; background-color:#f4f6f8; padding:24px 12px;">
+    <table width="100%" role="presentation">
+      <tr>
+        <td align="center">
+          <table class="container" width="680" role="presentation" style="background:#ffffff; border-radius:8px; overflow:hidden; box-shadow:0 6px 18px rgba(20,30,40,0.06);">
+            <!-- Header -->
+            <tr>
+              <td style="padding:22px 28px; background:#0b2540; color:#ffffff;">
+                <table width="100%" role="presentation">
+                  <tr>
+                    <td align="left" valign="middle">
+                      <!-- Replace LOGO_URL_HERE with your logo link if available -->
+                      <img src="LOGO_URL_HERE" alt="SSD Blog Online" width="140" style="max-width:140px; height:auto;">
+                    </td>
+                    <td align="right" valign="middle" style="font-size:14px; color:#cfe3ff;">
+                      <strong>SSD Blog Online</strong><br>
+                      <a href="https://www.ssdblog.online/" style="color:#cfe3ff;">www.ssdblog.online</a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Hero -->
+            <tr>
+              <td style="padding:28px;" class="pad">
+                <h1 class="h1" style="margin:0 0 12px; font-size:28px; color:#0b2540; font-weight:700;">
+                  AWS Solution Architect Program
+                </h1>
+                <p style="margin:0 0 18px; color:#334155; font-size:16px; line-height:1.5;">
+                  Dear Technocrats — accelerate your cloud career with our expert-led AWS program. Join the free introductory seminar and register for a focused 16-session course designed for certification success.
+                </p>
+
+                <!-- Info card -->
+                <table width="100%" role="presentation" style="margin-top:16px;">
+                  <tr>
+                    <td style="background:#f8fafc; border:1px solid #e6eef6; padding:18px; border-radius:6px;">
+                      <table width="100%" role="presentation">
+                        <tr>
+                          <td style="vertical-align:top;">
+                            <p style="margin:0; font-weight:700; color:#0b2540; font-size:15px;">Introductory Seminar</p>
+                            <p style="margin:6px 0 0; color:#334155; font-size:14px;">
+                              <strong>13th December 2025</strong><br>
+                              <strong>8:00 PM – 9:00 PM (IST)</strong><br>
+                              Mode: Live Online — 1 hour
+                            </p>
+                          </td>
+                          <td align="right" style="vertical-align:middle;">
+                            <p style="margin:0; font-weight:700; color:#0b2540;">Full Course</p>
+                            <p style="margin:6px 0 0; color:#334155; text-align:right;">
+                              16 live sessions after the seminar<br>
+                              Hands-on labs • Certification track
+                            </p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- CTA -->
+                <table width="100%" role="presentation" style="margin-top:18px;">
+                  <tr>
+                    <td align="center">
+                      <a href="https://www.ssdblog.online/" style="display:inline-block; padding:12px 22px; background:#0b6ff8; color:#ffffff; border-radius:6px; font-weight:700; font-size:16px;">
+                        Register Now — Reserve Your Seat
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- Benefits -->
+                <table width="100%" role="presentation" style="margin-top:22px;">
+                  <tr>
+                    <td style="padding:12px; background:#ffffff; border-radius:6px;">
+                      <ul style="margin:0; padding-left:18px; color:#334155; font-size:14px; line-height:1.6;">
+                        <li><strong>Certified instructors:</strong> Learn directly from industry experts.</li>
+                        <li><strong>Hands-on labs:</strong> Practical projects to prepare you for real work.</li>
+                        <li><strong>Certification guidance:</strong> Step-by-step support to crack the AWS certification.</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- Contact block -->
+                <table width="100%" role="presentation" style="margin-top:22px;">
+                  <tr>
+                    <td style="padding:16px; border-radius:6px; background:#f1f5f9;">
+                      <table role="presentation" width="100%">
+                        <tr>
+                          <td style="font-size:14px; color:#0b2540;">
+                            <strong>Need help or want to enroll by phone?</strong><br>
+                            Phone: <a href="tel:+918237867166" style="color:#0b6ff8; font-weight:700;">+91 82378 67166</a><br>
+                            Email: <a href="mailto:snehal.pdhamdar@gmail.com" style="color:#0b6ff8;">snehal.pdhamdar@gmail.com</a>
+                          </td>
+                          <td align="right" style="vertical-align:middle;">
+                            <a href="https://www.ssdblog.online/" style="font-size:14px; color:#0b2540; font-weight:700;">Visit Website →</a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+              </td>
+            </tr>
+
+            <!-- Footer -->
+            <tr>
+              <td style="background:#0b2540; color:#bed8ff; padding:18px 24px; font-size:13px;">
+                <table width="100%" role="presentation">
+                  <tr>
+                    <td>
+                      <div style="color:#dbefff; font-weight:700;">SSD Blog Online</div>
+                      <div style="margin-top:6px; color:#cfe3ff;">Website: <a href="https://www.ssdblog.online/" style="color:#cfe3ff;">www.ssdblog.online</a></div>
+                    </td>
+                    <td align="right" style="vertical-align:middle; color:#cfe3ff;">
+                      <div>Phone: +91 82378 67166</div>
+                      <div style="margin-top:6px;">Email: <a href="mailto:snehal.pdhamdar@gmail.com" style="color:#cfe3ff;">snehal.pdhamdar@gmail.com</a></div>
+                    </td>
+                  </tr>
+                </table>
+
+                <div style="border-top:1px solid rgba(255,255,255,0.06); margin-top:12px; padding-top:12px; color:#bcd8ff;">
+                  <small>
+                    You are receiving this email because you subscribed to SSD Blog Online updates or signed up for course notifications.
+                    If you prefer not to receive future emails, <a href="#UNSUBSCRIBE" style="color:#d8efff;">unsubscribe here</a>.
+                  </small>
+                </div>
+              </td>
+            </tr>
+
+          </table>
+        </td>
+      </tr>
+    </table>
+  </center>
+</body>
+</html>
