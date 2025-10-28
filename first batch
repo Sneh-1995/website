@@ -1,6 +1,6 @@
 <!--
 Subject: 🚀 Join Our AWS Solution Architect Program — Starting December 13, 2025!
-Preheader: Introductory seminar on 13 Dec 2025 | 8 PM - 9 PM — 16 Dec 2025, live sessions after seminar. Limited seats — Register now.
+Preheader: Introductory seminar on 13 Dec 2025 | 8 PM - 9 PM — Full classes begin 16 Dec 2025. Limited seats — Register now.
 -->
 <!doctype html>
 <html lang="en">
@@ -9,12 +9,14 @@ Preheader: Introductory seminar on 13 Dec 2025 | 8 PM - 9 PM — 16 Dec 2025, li
   <title>SSD Blog Online — AWS Solution Architect Program</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-    /* Fallback fonts and responsive helpers */
-    body { margin:0; padding:0; background-color:#f4f6f8; font-family: "Helvetica Neue", Arial, sans-serif; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; }
+    /* Responsive & fallback fonts */
+    body { margin:0; padding:0; background-color:#f4f6f8; font-family:"Helvetica Neue", Arial, sans-serif; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; }
     table { border-collapse:collapse; }
     img { display:block; border:0; outline:none; text-decoration:none; }
     a { color:#1a73e8; text-decoration:none; }
     .container { max-width:680px; margin:0 auto; }
+    .meet-btn { display:inline-block; padding:10px 18px; background:#0b8a5f; color:#ffffff; border-radius:6px; font-weight:700; text-decoration:none; transition:0.3s; }
+    .meet-btn:hover { background:#099e6f; }
     @media screen and (max-width:600px) {
       .stack { width:100% !important; display:block !important; }
       .pad { padding:18px !important; }
@@ -29,13 +31,14 @@ Preheader: Introductory seminar on 13 Dec 2025 | 8 PM - 9 PM — 16 Dec 2025, li
       <tr>
         <td align="center">
           <table class="container" width="680" role="presentation" style="background:#ffffff; border-radius:8px; overflow:hidden; box-shadow:0 6px 18px rgba(20,30,40,0.06);">
+            
             <!-- Header -->
             <tr>
               <td style="padding:22px 28px; background:#0b2540; color:#ffffff;">
                 <table width="100%" role="presentation">
                   <tr>
                     <td align="left" valign="middle">
-                      <!-- Replace LOGO_URL_HERE with your logo link if available -->
+                      <!-- Replace LOGO_URL_HERE with your logo -->
                       <img src="LOGO_URL_HERE" alt="SSD Blog Online" width="140" style="max-width:140px; height:auto;">
                     </td>
                     <td align="right" valign="middle" style="font-size:14px; color:#cfe3ff;">
@@ -54,7 +57,7 @@ Preheader: Introductory seminar on 13 Dec 2025 | 8 PM - 9 PM — 16 Dec 2025, li
                   AWS Solution Architect Program
                 </h1>
                 <p style="margin:0 0 18px; color:#334155; font-size:16px; line-height:1.5;">
-                  Dear Technocrats — accelerate your cloud career with our expert-led AWS program. Join the free introductory seminar and register for a focused 16-session course designed for certification success.
+                  Dear Technocrats — accelerate your cloud career with our expert-led AWS program. Join the free introductory seminar and enroll in our professional course starting this December.
                 </p>
 
                 <!-- Info card -->
@@ -72,14 +75,24 @@ Preheader: Introductory seminar on 13 Dec 2025 | 8 PM - 9 PM — 16 Dec 2025, li
                             </p>
                           </td>
                           <td align="right" style="vertical-align:middle;">
-                            <p style="margin:0; font-weight:700; color:#0b2540;">Full Course</p>
+                            <p style="margin:0; font-weight:700; color:#0b2540;">Full Classes Begin</p>
                             <p style="margin:6px 0 0; color:#334155; text-align:right;">
-                              16 live sessions after the seminar<br>
-                              Hands-on labs • Certification track
+                              <strong>16th December 2025</strong><br>
+                              Live Online AWS Training Program
                             </p>
                           </td>
                         </tr>
                       </table>
+
+                      <!-- Google Meet Join Button -->
+                      <div style="margin-top:16px; text-align:center;">
+                        <a class="meet-btn" href="https://calendar.app.google/A67Ke33A6FNQUHXJ9" target="_blank" rel="noopener noreferrer">
+                          🎥 Join Seminar Live on Google Meet
+                        </a>
+                        <p style="margin:10px 0 0; color:#667085; font-size:13px;">
+                          (Opens in Google Calendar / Meet. Join at 8:00 PM IST on 13th Dec 2025)
+                        </p>
+                      </div>
                     </td>
                   </tr>
                 </table>
@@ -127,7 +140,6 @@ Preheader: Introductory seminar on 13 Dec 2025 | 8 PM - 9 PM — 16 Dec 2025, li
                     </td>
                   </tr>
                 </table>
-
               </td>
             </tr>
 
@@ -138,11 +150,15 @@ Preheader: Introductory seminar on 13 Dec 2025 | 8 PM - 9 PM — 16 Dec 2025, li
                   <tr>
                     <td>
                       <div style="color:#dbefff; font-weight:700;">SSD Blog Online</div>
-                      <div style="margin-top:6px; color:#cfe3ff;">Website: <a href="https://www.ssdblog.online/" style="color:#cfe3ff;">www.ssdblog.online</a></div>
+                      <div style="margin-top:6px; color:#cfe3ff;">Website: 
+                        <a href="https://www.ssdblog.online/" style="color:#cfe3ff;">www.ssdblog.online</a>
+                      </div>
                     </td>
                     <td align="right" style="vertical-align:middle; color:#cfe3ff;">
                       <div>Phone: +91 82378 67166</div>
-                      <div style="margin-top:6px;">Email: <a href="mailto:snehal.pdhamdar@gmail.com" style="color:#cfe3ff;">snehal.pdhamdar@gmail.com</a></div>
+                      <div style="margin-top:6px;">Email: 
+                        <a href="mailto:snehal.pdhamdar@gmail.com" style="color:#cfe3ff;">snehal.pdhamdar@gmail.com</a>
+                      </div>
                     </td>
                   </tr>
                 </table>
@@ -150,7 +166,8 @@ Preheader: Introductory seminar on 13 Dec 2025 | 8 PM - 9 PM — 16 Dec 2025, li
                 <div style="border-top:1px solid rgba(255,255,255,0.06); margin-top:12px; padding-top:12px; color:#bcd8ff;">
                   <small>
                     You are receiving this email because you subscribed to SSD Blog Online updates or signed up for course notifications.
-                    If you prefer not to receive future emails, <a href="#UNSUBSCRIBE" style="color:#d8efff;">unsubscribe here</a>.
+                    If you prefer not to receive future emails, 
+                    <a href="#UNSUBSCRIBE" style="color:#d8efff;">unsubscribe here</a>.
                   </small>
                 </div>
               </td>
