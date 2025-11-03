@@ -109,6 +109,69 @@
             </tr>
 
             <!-- Call to Action -->
+            <!-- ===== DevOps Application Form (posts to Apps Script web app) ===== -->
+<form id="apply-form" class="tnr" action="PASTE_YOUR_WEB_APP_URL_HERE" method="POST" style="padding:24px 28px;">
+  <h2 style="margin:0 0 10px 0; font-size:18px;">Apply for DevOps Trainer & Mentor</h2>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="font-size:16px;">
+    <tr>
+      <td style="padding:8px 0;">
+        <label for="fullName"><strong>Full Name</strong></label><br/>
+        <input id="fullName" name="fullName" type="text" required
+               style="width:100%; padding:10px; border:1px solid #ddd; border-radius:4px;">
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:8px 0;">
+        <label for="email"><strong>Email</strong></label><br/>
+        <input id="email" name="email" type="email" required
+               style="width:100%; padding:10px; border:1px solid #ddd; border-radius:4px;">
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:8px 0;">
+        <label for="phone"><strong>Phone</strong> (optional)</label><br/>
+        <input id="phone" name="phone" type="text"
+               style="width:100%; padding:10px; border:1px solid #ddd; border-radius:4px;">
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:8px 0;">
+        <label for="experience"><strong>Years of DevOps Experience</strong></label><br/>
+        <input id="experience" name="experience" type="number" min="0" max="50" required
+               style="width:100%; padding:10px; border:1px solid #ddd; border-radius:4px;">
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:8px 0;">
+        <label for="resume"><strong>Resume URL</strong> (Google Drive / LinkedIn / Portfolio)</label><br/>
+        <input id="resume" name="resume" type="url" required
+               placeholder="https://drive.google.com/..."
+               style="width:100%; padding:10px; border:1px solid #ddd; border-radius:4px;">
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:8px 0;">
+        <label for="note"><strong>Short Note</strong> (why you’re a fit)</label><br/>
+        <textarea id="note" name="note" rows="4"
+                  style="width:100%; padding:10px; border:1px solid #ddd; border-radius:4px;"></textarea>
+      </td>
+    </tr>
+  </table>
+
+  <!-- Hidden fields used by the backend -->
+  <input type="hidden" name="role" value="DevOps Trainer & Mentor">
+  <input type="hidden" name="toEmail" value="snehal.pdhamdar@gmail.com">
+  <input type="hidden" name="site" value="ssdblog.online">
+  <input type="hidden" name="thankyou" value="https://ssdblog.online/thank-you.html">
+
+  <div style="margin-top:14px;">
+    <button type="submit" class="btn">Apply Now</button>
+    <span class="muted" style="margin-left:8px; font-size:13px;">By submitting, you agree to be contacted about this role.</span>
+  </div>
+</form>
+<!-- ===== /Form ===== -->
+
             <tr>
               <td class="tnr" align="center" style="padding:26px 28px 30px 28px;">
                 <!-- Primary Button: Website -->
