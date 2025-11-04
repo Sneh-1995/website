@@ -6,24 +6,6 @@
   <title>AWS Solution Architect Career Kickstart</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      font-family: 'Times New Roman', serif;
-    }
-    .btn {
-      background-color: #004080; /* Navy blue */
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    .btn:hover {
-      background-color: #00264d;
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -57,28 +39,13 @@
     </ul>
   </section>
 
-  <!-- AWS Seminar Card with payment + certificate -->
   <section class="cards">
     <div class="card">
       <div class="tag">Seminar: Why AWS?</div>
       <p>🎤 Discover why AWS Cloud is the platform of choice for modern careers.</p>
-      <div class="price">Just ₹99</div><br>
-      <small><a href="policy.html">See our terms and conditions here</a></small><br>
-
-      <div class="card">
-      <div class="tag">🧠 AWS Quiz</div>
-      <p>Test your AWS knowledge with 10 quick questions and see if you pass!</p>
-      <button class="btn" onclick="window.location.href='aws-quiz.html'">Take Quiz</button>
-    </div>
-      
-      <!-- Enroll Button -->
-      <button class="btn" id="enrollBtn" onclick="startPayment()">Enroll Now</button>
-
-      <!-- Hidden Certificate Download Button -->
-      <button class="btn" id="certificateBtn" style="display:none; background:#001f3f; margin-top:10px;" 
-        onclick="window.location.href='https://ssdblog.online/aws-digital-certificate.html'">
-        🎓 Download Certificate
-      </button>
+      <div class="price">Just ₹99</div></br>
+      <small><a href="policy.html">See our terms and conditions here</a></small></br>
+      <button class="btn" onclick="window.open('https://rzp.io/rzp/iF237bL','_blank')">Enroll now</button>
     </div>
 
     <div class="card">
@@ -134,35 +101,24 @@
       </ul>
     </div>
   </div>
-
-  <!-- Careers Section -->
-  <section class="tutor">
-    <h2>SSD Careers</h2>
-    <div class="tutor-card">
-      <div class="tutor-info">
-        <h3>Join Our DevOps Tutor Team</h3>
-        <p>
-          Like to work with us? We’re hiring passionate DevOps tutors who can train students in
-          real-world tools and cloud workflows.
-        </p>
-         <button class="btn" onclick="window.location.href='ssdblog-devops-email-times.html'">
-          Apply Now
-        </button>
-      </div>
+<!-- Careers With Us Section -->
+<section class="tutor">
+  <h2>SSD Careers</h2>
+  <div class="tutor-card">
+    <div class="tutor-info">
+      <h3>Join Our DevOps Tutor Team</h3>
+      <p>
+        Like to work with us? We’re hiring passionate DevOps tutors who can train students in
+        real-world tools and cloud workflows.
+      </p>
+       <button class="btn" onclick="window.location.href='ssdblog-devops-email-times.html'">
+        Apply Now
+      </button>
     </div>
-  </section>
+  </div>
+</section>
 
-  <script>
-    // Simulate payment success for demo purposes
-    function startPayment() {
-      window.open('https://rzp.io/rzp/iF237bL', '_blank');
-      alert("✅ Payment successful! You can now download your certificate.");
-      document.getElementById('enrollBtn').style.display = 'none';
-      document.getElementById('certificateBtn').style.display = 'inline-block';
-    }
-  </script>
 
   <script src="script.js"></script>
 </body>
 </html>
-
