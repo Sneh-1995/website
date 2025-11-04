@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AWS Solutions Architect — Pass/Fail Quiz</title>
+  <style>
+    body {font-family: Arial, sans-serif; background-color: #0f172a; color: #f0f0f0; margin: 0; padding: 20px; display: flex; justify-content: center; align-items: center; height: 100vh;}
+    .container {max-width: 700px; width: 100%; background: #1e293b; padding: 20px; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.5);}
+    h1 {text-align: center; color: #38bdf8;}
+    .question {margin-bottom: 20px;}
+    .options button {display: block; width: 100%; margin: 6px 0; padding: 10px; border: none; border-radius: 6px; background: #334155; color: #fff; cursor: pointer; text-align: left;}
+    .options button:hover {background: #475569;}
+    .navigation {display: flex; justify-content: space-between; margin-top: 20px;}
+    .navigation button {padding: 10px 16px; border: none; border-radius: 6px; cursor: pointer; background: #38bdf8; color: #0f172a; font-weight: bold;}
+    .navigation button:disabled {background: #334155; color: #64748b; cursor: not-allowed;}
+    .result {text-align: center; margin-top: 20px; padding: 20px; border-radius: 10px; background: #1e3a8a;}
+    .pass {color: #22c55e; font-weight: bold;}
+    .fail {color: #ef4444; font-weight: bold;}
+    .certificate-btn {margin-top: 18px; padding: 12px 24px; border-radius: 8px; border: none; color: #fff; background: #22c55e; font-size: 1.2em; cursor: pointer;}
+    .certificate-btn:hover {background: #38bdf8; color: #0f172a;}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>AWS Solutions Architect — 10 Question Quiz</h1>
+    <div id="quiz"></div>
+    <div class="navigation">
+      <button id="prevBtn">Previous</button>
+      <button id="nextBtn">Next</button>
+      <button id="submitBtn" style="display:none;">Submit</button>
+    </div>
+    <div id="result" class="result" style="display:none;"></div>
+  </div>
+
+  <script>
+    const questions = [
+      {q:'Which AWS service is used for scalable object storage?',opts:['Amazon EC2','Amazon EBS','Amazon S3','Amazon RDS'],a:2},
+      {q:'Which service lets you create isolated networks in AWS?',opts:['AWS Lambda','Amazon VPC','Amazon CloudFront','Amazon Route 53'],a:1},
+      {q:'Which AWS service provides serverless computing?',opts:['AWS Lambda','Amazon EC2','AWS Fargate','AWS Elastic Beanstalk'],a:0},
+      {q:'Which service helps distribute traffic across multiple targets?',opts:['AWS CloudFormation','Elastic Load Balancer','Amazon Route 53','Amazon CloudFront'],a:1},
+      {q:'Which service automates provisioning of AWS infrastructure?',opts:['AWS CloudFormation','AWS Config','AWS CloudTrail','AWS OpsWorks'],a:0},
+      {q:'Which AWS database service is relational?',opts:['Amazon RDS','Amazon DynamoDB','Amazon Redshift','Amazon ElastiCache'],a:0},
+      {q:'Which service enables global DNS and domain registration?',opts:['Amazon CloudFront','Amazon Route 53','Amazon VPC','AWS Global Accelerator'],a:1},
+      {q:'Which service provides monitoring for AWS resources?',opts:['AWS CloudTrail','AWS Config','Amazon CloudWatch','AWS Inspector'],a:2},
+      {q:'Which service stores and retrieves messages between distributed systems?',opts:['Amazon SNS','Amazon SQS','AWS Lambda','AWS EventBridge'],a:1},
+      {q:'Which AWS service helps you track user activity and API usage?',opts:['AWS CloudTrail','AWS IAM','AWS Config','AWS Trusted Advisor'],a:0}
+    ];
+
+    let current = 0;
+    let score = 0;
+    let answers = Array(questions.length).fill(null);
+
+    const quiz = document.getElementById('quiz');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const submitBtn = document.getElementById('submitBtn');
+    const resultDiv = document.getElementById('result');
+
+    function loadQuestion() {
+      const q = questions[current];
+      quiz.innerHTML = `<div class='question'><h3>Question ${current + 1} of ${questions.length}</h3><p>${q.q}</p><div class='options'>${q.opts.map((opt, i) => `<button class='option' onclick='selectAnswer(${i})'>${String.fromCharCode(65+i)}) ${opt}</button>`).join('')}</div></div>`;
+      prevBtn.disabled = current === 0;
+      nextBtn.style.display = current === questions.length - 1 ? 'none' : 'inline-block';
+      submitBtn.style.display = current === questions.length - 1 ? 'inline-block' : 'none';
+    }
+
+    window.selectAnswer = function(index) {
+      answers[current] = index;
+      document.querySelectorAll('.option').forEach((btn, i) => {
+        btn.style.background = i === index ? '#22c55e' : '#334155';
+      });
+    }
+
+    prevBtn.addEventListener('click', () => {
+      if (current > 0) {
+        current--;
+        loadQuestion();
+      }
+    });
+
+    nextBtn.addEventListener('click', () => {
+      if (current < questions.length - 1) {
+        current++;
+        loadQuestion();
+      }
+    });
+
+    submitBtn.addEventListener('click', () => {
+      let correct = 0;
+      for (let i = 0; i < questions.length; i++) {
+        if (answers[i] === questions[i].a) correct++;
+      }
+      const passMark = 7;
+      const passed = correct >= passMark;
+      quiz.style.display = 'none';
+      prevBtn.style.display = 'none';
+      nextBtn.style.display = 'none';
+      submitBtn.style.display = 'none';
+      resultDiv.style.display = 'block';
+
+      if (passed) {
+        // Ask for name and show certificate button
+        let name = '';
+        while (!name) {
+          name = prompt('Congratulations! Enter your name as you want it to appear on the certificate:');
+          if (name === null) break; // user cancelled
+        }
+        resultDiv.innerHTML = `<h2 class="pass">🎉 PASS</h2>
+          <p>Your Score: ${correct}/10</p>
+          <p>Great job! You’re AWS-ready.</p>
+          ${name 
+            ? `<button class="certificate-btn" onclick="window.location.href='aws-digital-certificate.html?name=' + encodeURIComponent('${name}')">View Certificate</button>`
+            : '<p>You can reload the page to re-enter your name for the certificate later.</p>'
+          }`;
+        // But name must be interpolated JS in the button to allow for spaces and special chars
+        if (name) {
+          // Replace the button just rendered with one that has correct JS for name interpolation
+          resultDiv.querySelector('.certificate-btn').onclick = function() {
+            window.location.href = 'aws-digital-certificate.html?name=' + encodeURIComponent(name);
+          }
+        }
+      } else {
+        resultDiv.innerHTML = `<h2 class="fail">❌ FAIL</h2>
+          <p>Your Score: ${correct}/10</p>
+          <p>Review AWS concepts and try again.</p>`;
+      }
+    });
+
+    loadQuestion();
+  </script>
+</body>
+</html>

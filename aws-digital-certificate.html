@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Digital AWS Certificate - ssdblog.online</title>
   <style>
+    <style>
     body {
       font-family: "Times New Roman", Times, serif;
       background: linear-gradient(to bottom right, #f8faff, #e6ecf5);
@@ -121,7 +122,7 @@
   <div class="certificate">
     <h1>Certificate of Completion</h1>
     <h2>This certificate is proudly presented to</h2>
-    <div class="student-name">Snehal Dhamdar</div>
+    <div class="student-name" id="studentName"></div>
 
     <p>for successfully completing the <span class="highlight">AWS Cloud Computing Training Program</span> conducted by <span class="gold">ssdblog.online</span>.</p>
     <p>The participant has demonstrated proficiency in <strong>AWS core services</strong>, <strong>cloud architecture principles</strong>, and <strong>practical deployment skills</strong>, preparing them for real-world cloud solutions implementation.</p>
@@ -138,5 +139,13 @@
 
     <button class="print-btn" onclick="window.print()">🖨️ Print / Save Certificate</button>
   </div>
+  <script>
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+    const name = getQueryParam('name') || '___________';
+    document.getElementById('studentName').textContent = name;
+  </script>
 </body>
 </html>
