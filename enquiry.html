@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AWS Training & Cloud Career Enquiry</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background: linear-gradient(135deg,#dbeafe,#60a5fa);
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .header-banner {
+      background: linear-gradient(90deg,#3b82f6 0%, #22d3ee 100%);
+      color: #fff;
+      padding: 52px 18px 38px 18px;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+      text-align: center;
+      position: relative;
+      margin-bottom: 20px;
+    }
+    .header-banner .rocket {
+      vertical-align: middle;
+      font-size: 38px;
+      margin-right: 6px;
+    }
+    .header-banner h1 {
+      font-size: 2.8em;
+      font-weight: 700;
+      margin: 0 0 12px 0;
+      letter-spacing: 1px;
+      color: #fff;
+      display: inline-block;
+    }
+    .header-banner .subtitle {
+      font-size: 1.45em;
+      margin-bottom: 8px;
+      color: #e0f2fe;
+      font-weight: 400;
+    }
+    .header-banner .note {
+      font-size: 1.11em;
+      margin-top: 9px;
+      color: #f3fafc;
+      display: block;
+    }
+    .main-container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 36px 24px;
+      box-sizing: border-box;
+      gap: 44px;
+    }
+    .left-content {
+      flex: 2;
+      min-width: 300px;
+      background: #e0e7ff;
+      border-radius: 16px;
+      padding: 32px 32px 32px 32px;
+      box-shadow: 0 4px 12px rgba(30,58,138,.07);
+      margin-bottom: 30px;
+    }
+    .left-content img {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 10px;
+      margin-bottom: 18px;
+    }
+    .left-content h1 {
+      color: #2563eb;
+      margin-bottom: 16px;
+    }
+    .left-content ul {
+      font-size: 18px;
+      color: #1e293b;
+      margin: 14px 0 16px 18px;
+    }
+    .right-form {
+      flex: 1;
+      min-width: 320px;
+      background: #f1f5f9;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(37,99,235,.13);
+      padding: 32px 28px 32px 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: fit-content;
+    }
+    .right-form h2 {
+      color: #1d4ed8;
+      margin-bottom: 18px;
+      text-align: center;
+    }
+    label {
+      display: block;
+      color: #2563eb;
+      margin-bottom: 4px;
+      font-weight: 500;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 14px;
+      border-radius: 6px;
+      border: 1px solid #3b82f6;
+      font-size: 15px;
+      box-sizing: border-box;
+    }
+    button[type="submit"] {
+      background: #2563eb;
+      color: #fff;
+      border-radius: 6px;
+      border: none;
+      font-size: 18px;
+      padding: 10px 22px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 4px;
+    }
+    @media (max-width: 900px) {
+      .main-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 18px;
+      }
+      .right-form, .left-content {
+        min-width: 0;
+        width: 100%;
+        padding: 32px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Banner Header Section -->
+  <div class="header-banner">
+    <span class="rocket">🚀</span>
+    <h1>AWS Solution Architect Career Kickstart</h1>
+    <div class="subtitle">“Become an AWS Solution Architect — Earn ₹11 LPA+”</div>
+    <span class="note">💡 No coding required. Just Learn Cloud, Get Certified & Land a Dream Job in Top MNCs</span>
+  </div>
+
+  <div class="main-container">
+    <div class="left-content">
+      <!-- Your existing course image below -->
+      <img src="image.jpg" alt="AWS Course Frontpage" />
+      <h1>AWS Training & Cloud Career Courses</h1>
+      <ul>
+        <li>AWS Comprehensive Course: ₹3000 per month</li>
+        <li>AWS Express Batch: ₹8000 per month (Daily lessons)</li>
+        <li>1-Hour Cloud Computing Seminar: ₹99</li>
+        <li>Internships & Job Support</li>
+      </ul>
+      <span style="color:#1e40af;">Visit <a href="https://ssdblog.online" style="color:#2563eb;">ssdblog.online</a> for details</span>
+    </div>
+    <div class="right-form">
+      <h2>Enquiry Form</h2>
+      <form id="enquiryForm">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" required />
+        <label for="interest">Interested In</label>
+        <select id="interest" name="interest" required>
+          <option value="">Select...</option>
+          <option value="aws_comprehensive">AWS Comprehensive Course (₹3000/month)</option>
+          <option value="aws_express">AWS Express (₹8000/month, Daily)</option>
+          <option value="cloud_seminar">Cloud Seminar (₹99, 1 hour)</option>
+          <option value="internship">Internship / Job Support</option>
+        </select>
+        <label for="message">Your Query</label>
+        <textarea id="message" name="message" rows="3" placeholder="Type your question..."></textarea>
+        <button type="submit">Enquire Now</button>
+      </form>
+    </div>
+  </div>
+
+    <script>
+                document.getElementById('enquiryForm').onsubmit = async function(e) {
+                    e.preventDefault();
+            const data = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                interest: document.getElementById('interest').value,
+                message: document.getElementById('message').value
+            };
+            await fetch('https://script.google.com/macros/s/AKfycbxvEFoFXQ6I2tT5yMp4MWzB3vq2kvY9tF8OmhfbxTtAONk1glTVKQyLXx6qIBm7Q4HXfw/exec', {
+                method: 'POST',
+                body: JSON.stringify(data),
+                headers: { 'Content-Type': 'application/json' }
+            });
+            document.getElementById('enquiryForm').reset(); // This clears the form
+            alert('Your enquiry has been submitted!');
+            };
+
+        };
+        </script>
+</body>
+</html>
