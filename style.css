@@ -281,3 +281,22 @@
   float: right;
   cursor: pointer;
 }
+
+.aws-btn {
+    display: block;          /* makes button behave like a block */
+    width: fit-content;      /* makes width fit the text */
+    margin: 20px auto 0;     /* this centers it */
+    background-color: #0b5fff;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.aws-btn:hover {
+    background-color: #0044cc;
+    transform: translateY(-2px);
+}
