@@ -195,7 +195,7 @@
     formData.forEach((val, key) => obj[key] = val);
 
     try {
-      const res = await fetch('YOUR_NOCODEAPI_URL_HERE', {
+      const res = await fetch('https://v1.nocodeapi.com/snehal_dhamdar/google_sheets/doPGVKHsClDTDPQN', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify([obj])
