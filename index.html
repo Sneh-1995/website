@@ -1,17 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17744245054"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-17744245054');
-</script>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AWS Solution Architect Career Kickstart</title>
@@ -64,14 +53,24 @@
       <p>🏆 Learn core AWS services with practical demos, labs, and exam prep for Cloud Practitioner.</p>
       <div class="price">₹3000 • Lifetime access</div>
       <button class="btn" onclick="openCourse()">See More</button>
+      <button class="btn" onclick="window.open('https://rzp.io/rzp/ua9hTr3H','_blank')">Enroll now</button>
     </div>
 
     <div class="card">
-      <div class="tag">📝 Project Assessment</div>
-      <p>We help you with your AWS project!</p>
+      <div class="tag">Express Entry Batch</div>
+      <p>🔥 30 Days Daily Batch • Complete AWS revision • Doubts + Hands-on + Interview Prep</p>
+      <div class="price">₹10,000 • Lifetime access </div>
+      <button class="btn" onclick="show8000Modal()">See More</button>
+      <button class="btn" onclick="window.open('https://rzp.io/rzp/AKxyHh3u','_blank')">Enroll now</button>
+    </div>
+
+    <div class="card">
+      <div class="tag">📝 Project Assessment and Internships</div>
+      <p>We provide you with internships and projects</p>
       <button class="btn" onclick="showProjectModal()">See More</button>
     </div>
   </section>
+
 
   <section class="tutor">
     <h2>About Myself</h2>
@@ -87,8 +86,11 @@
     </div>
   </section>
 
-  <div id="courseDetails">
-    <div class="modal-card">
+  
+  <!-- Basic Course Modal -->
+  <div id="courseDetails" class="modal-bg">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeCourse()">&times;</button>
       <h2>Basic AWS Training — Full Details</h2>
       <p>Price: ₹3000 • Lifetime access • Self-paced resources + live doubt support</p>
       <ul class="stacked-list">
@@ -96,12 +98,31 @@
         <li>Security, Identity & Compliance essentials</li>
         <li>Certification Preparation + Interview Readiness</li>
       </ul>
-      <div style="text-align:right"><button class="btn" onclick="window.open('https://rzp.io/rzp/ua9hTr3H','_blank')">Enroll now</button>
       <button class="btn" onclick="closeCourse()">Close</button></div>
-    </div>
     </div>
   </div>
 
+  
+  <!-- ₹8000 Modal -->
+  <div class="modal-bg" id="modal-8000">
+    <div class="modal-content">
+      <button class="modal-close" onclick="close8000Modal()">&times;</button>
+      <h2>Express Daily Batch — ₹10000</h2>
+      <p>30 Days • Daily Live AWS Class • </p>
+
+      <ul>
+        <li>Live weekly sessions</li>
+        <li>Complete AWS Solution Architect </li>
+        <li>Doubts + Hands-on Labs</li>
+        <li>Interview preparation</li>
+      </ul>
+
+      <button class="btn" onclick="closeCourse()">Close</button></div>
+    </div>
+  </div>
+
+
+  <!-- Project Modal -->
   <div class="modal-bg" id="project-modal-bg">
     <div class="modal-content">
       <button class="modal-close" onclick="hideProjectModal()">&times;</button>
@@ -112,6 +133,7 @@
         <li>Machine Learning with SageMaker</li>
         <li>CI/CD Pipeline with CodeBuild</li>
       </ul>
+      <button class="btn" onclick="closeCourse()">Close</button></div>
     </div>
   </div>
 <!-- Careers With Us Section -->
@@ -130,10 +152,6 @@
     </div>
   </div>
 </section>
-
-
   <script src="script.js"></script>
 </body>
 </html>
-
-
