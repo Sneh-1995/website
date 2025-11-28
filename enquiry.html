@@ -185,36 +185,55 @@
   const form = document.getElementById('enquiryForm');
   const statusDiv = document.createElement('div');
   form.parentNode.appendChild(statusDiv);
-  statusDiv.style.marginTop = '12px';
-  statusDiv.style.fontWeight = '600';
 
-  form.onsubmit = async function(e) {
+  const submitBtn = form.querySelector('button[type="submit"]');
+
+  form.onsubmit = async function (e) {
     e.preventDefault();
+
+    // Disable the button immediately
+    submitBtn.disabled = true;
+
     const formData = new FormData(form);
-    const obj = {};
-    formData.forEach((val, key) => obj[key] = val);
+    const row = [
+      formData.get("name"),
+      formData.get("phone"),
+      formData.get("email"),
+      formData.get("interest"),
+      formData.get("message")
+    ];
 
     try {
-      const res = await fetch('https://v1.nocodeapi.com/snehal_dhamdar/google_sheets/doPGVKHsClDTDPQN?tabId=Sheet1', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify([obj])
-      });
-      const data = await res.json();
+      const res = await fetch(
+        "https://v1.nocodeapi.com/snehal_dhamdar/google_sheets/doPGVKHsClDTDPQN?tabId=Sheet1",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify([row])
+        }
+      );
+
+      const text = await res.text();
+      console.log("RAW RESPONSE:", text);
+
       if (res.ok) {
-        statusDiv.innerText = 'Your enquiry has been submitted successfully!';
-        statusDiv.style.color = 'green';
+        statusDiv.innerText = "Your enquiry has been submitted successfully we will contact you at short Notice!";
+        statusDiv.style.color = "green";
         form.reset();
       } else {
-        statusDiv.innerText = 'Submission failed: ' + (data.message || 'Unknown error');
-        statusDiv.style.color = 'red';
+        statusDiv.innerText = "Submission failed: " + text;
+        statusDiv.style.color = "red";
+        submitBtn.disabled = false; // Re-enable if failed
       }
+
     } catch (err) {
-      statusDiv.innerText = 'Network error: ' + err.message;
-      statusDiv.style.color = 'red';
+      statusDiv.innerText = "Network error: " + err.message;
+      statusDiv.style.color = "red";
+      submitBtn.disabled = false; // Re-enable if failed
     }
   };
 </script>
+
 
   
 </body>
