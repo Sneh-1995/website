@@ -7,11 +7,11 @@
 
 <style>
     :root {
-        --primary: #2563eb;
+        --primary: #d5dbe8;
         --primary-dark: #1e40af;
         --bg: #eef6ff;
-        --text: #1f2937;
-        --muted: #6b7280;
+        --text: #797f86;
+        --muted: #9d9fa4;
     }
 
     body{
@@ -32,38 +32,44 @@
     }
 
     /* LEFT CONTENT */
+        
     .left {
-        padding-right: 20px;
-    }
+    padding: 20px;
+    background-color:linear-gradient(140deg, #054d8b 0%, #057cc6 100%); /* Keeping the blue background */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    backdrop-filter: blur(8px); /* Optional: add a slight blur to background for focus */
+    background-blend-mode: lighten;
+}
 
-    .left h2 {
-        font-size: 1.8rem;
-        margin-bottom: 10px;
-        color: #0f172a;
-    }
+.left h2 {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+    color: #FFFFFF; /* White text for good contrast with the blue background */
+}
 
-    .left p {
-        color: var(--muted);
-        font-size: 1rem;
-        margin-bottom: 16px;
-    }
+.left p {
+    color: #E0E0E0; /* Light grey text for better readability while still being softer than white */
+    font-size: 1rem;
+    margin-bottom: 18px;
+}
 
-    .left ul {
-        margin: 0;
-        padding-left: 20px;
-    }
+.left ul {
+    margin: 0;
+    padding-left: 20px;
+}
 
-    .left ul li {
-        margin-bottom: 8px;
-        color: var(--text);
-        font-size: 0.95rem;
-    }
+.left ul li {
+    margin-bottom: 10px;
+    color: #FFFFFF; /* White text for list items to match heading for consistency */
+    font-size: 1rem;
+}
 
-    .contact {
-        margin-top: 20px;
-        font-size: 0.9rem;
-        color: var(--muted);
-    }
+.contact {
+    margin-top: 20px;
+    font-size: 0.95rem;
+    color: #D1D1D1; /* Slightly darker grey than the paragraph text for distinction but still readable */
+}
 
     /* FORM CARD */
     .form-card {
