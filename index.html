@@ -9,12 +9,13 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17744245054"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
 
+    // Global site tag
     gtag('config', 'AW-17744245054');
   </script>
-  <!-- End Google tag -->
+  <!-- End Google Tag -->
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -23,9 +24,9 @@
 
 <header class="header-box">
   <div class="text-box">
-      <h1>🚀 AWS Solution Architect Career Kickstart</h1>
-      <p class="hook">“Become an AWS Solution Architect — Earn ₹11 LPA+ ”</p>
-      <p class="subhook">💡 No coding experience required. Learn Cloud, Get Certified & Land a Dream Job in Top MNCs</p>
+    <h1>🚀 AWS Solution Architect Career Kickstart</h1>
+    <p class="hook">“Become an AWS Solution Architect — Earn ₹11 LPA+ ”</p>
+    <p class="subhook">💡 No coding experience required. Learn Cloud, Get Certified & Land a Dream Job in Top MNCs</p>
   </div>
 </header>
 
@@ -42,7 +43,7 @@
     </ul>
 
     <a href="startyourawsjourney.html" class="aws-btn" target="_blank">
-        Start your AWS Journey
+      Start your AWS Journey
     </a>
   </div>
 
@@ -66,7 +67,7 @@
     <p>🎤 Discover why AWS Cloud is the platform of choice for modern careers.</p>
     <div class="price">Just ₹99</div><br>
     <small><a href="policy.html">See our terms and conditions here</a></small><br>
-    <button class="btn" onclick="window.open('https://rzp.io/rzp/iF237bL','_blank')">Enroll now</button>
+    <button class="btn enroll-btn" onclick="window.open('https://rzp.io/rzp/iF237bL','_blank')">Enroll now</button>
   </div>
 
   <div class="card">
@@ -74,7 +75,7 @@
     <p>🏆 Learn core AWS services with practical demos, labs, and exam prep for Cloud Practitioner.</p>
     <div class="price">₹3000 • Drive Lifetime access</div>
     <button class="btn" onclick="openCourse()">See More</button>
-    <button class="btn" onclick="window.open('https://rzp.io/rzp/ua9hTr3H','_blank')">Enroll now</button>
+    <button class="btn enroll-btn" onclick="window.open('https://rzp.io/rzp/ua9hTr3H','_blank')">Enroll now</button>
   </div>
 
   <div class="card">
@@ -82,12 +83,12 @@
     <p>🔥 30 Days Batch • Complete AWS course • Doubts + Hands-on + Interview Prep</p>
     <div class="price">₹10,000 • Lifetime access to recorded classes</div>
     <button class="btn" onclick="show8000Modal()">See More</button>
-    <button class="btn" onclick="window.open('https://rzp.io/rzp/AKxyHh3u','_blank')">Enroll now</button>
+    <button class="btn enroll-btn" onclick="window.open('https://rzp.io/rzp/AKxyHh3u','_blank')">Enroll now</button>
   </div>
 
   <div class="card">
     <div class="tag">📝 Project Assessment</div>
-    <p>We provide you with internships & real AWS project support.</p>
+    <p>We provide internships & real AWS project support.</p>
     <button class="btn" onclick="showProjectModal()">See More</button>
   </div>
 
@@ -99,70 +100,26 @@
     <div class="tutor-info">
       <h3>Snehal Dhamdar</h3>
       <p>AWS Certified Solutions Architect • Trainer & Mentor</p>
-      <p>I help students kickstart their cloud careers with practical AWS hands-on training, labs, certification prep, and real projects.</p>
+      <p>I help students kickstart their cloud careers with practical AWS training, certification prep, and real projects.</p>
       <p>Email: <a href="mailto:snehal.pdhamdar@gmail.com">snehal.pdhamdar@gmail.com</a></p>
     </div>
     <img src="snehal.jpg" alt="Snehal Dhamdhar Photo" class="tutor-photo"/>
   </div>
 </section>
 
-<!-- Modals -->
-<div id="courseDetails" class="modal-bg">
-  <div class="modal-content">
-    <button class="modal-close" onclick="closeCourse()">&times;</button>
-    <h2>Basic AWS Training — Full Details</h2>
-    <p>Price: ₹3000 • Lifetime access • Self-paced content + doubt support</p>
-    <ul class="stacked-list">
-      <li>Compute, Storage, Networking, Databases</li>
-      <li>Security, Identity & Compliance</li>
-      <li>Exam Prep + Interview Readiness</li>
-    </ul>
-    <button class="btn" onclick="closeCourse()">Close</button>
-  </div>
-</div>
+<!-- ==== GOOGLE ADS CONVERSION EVENT ==== -->
+<script>
+  function fireConversion() {
+    gtag('event', 'conversion', {
+      'send_to': 'AW-17744245054/HddlCO-WxsUbEL7jjo1C'
+    });
+    console.log("🔥 Google Ads Conversion Fired");
+  }
 
-<div class="modal-bg" id="modal-8000">
-  <div class="modal-content">
-    <button class="modal-close" onclick="close8000Modal()">&times;</button>
-    <h2>Express Daily Batch — ₹10000</h2>
-    <p>30 Days • Daily Live AWS Class</p>
-    <ul>
-      <li>Live weekly sessions</li>
-      <li>Complete AWS Solution Architect training</li>
-      <li>Hands-on Labs</li>
-      <li>Interview preparation</li>
-    </ul>
-    <button class="btn" onclick="close8000Modal()">Close</button>
-  </div>
-</div>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Main CTA
+    const mainBtn = document.querySelector(".aws-btn");
+    if (mainBtn) mainBtn.addEventListener("click", fireConversion);
 
-<div class="modal-bg" id="project-modal-bg">
-  <div class="modal-content">
-    <button class="modal-close" onclick="hideProjectModal()">&times;</button>
-    <h2>Get Help With Your AWS Project 🚀</h2>
-    <p>Contact: <a href="mailto:snehal.pdhamdar@gmail.com">snehal.pdhamdar@gmail.com</a></p>
-    <ul>
-      <li>Serverless Web App on AWS</li>
-      <li>Machine Learning with SageMaker</li>
-      <li>CI/CD Pipeline with CodeBuild</li>
-    </ul>
-    <button class="btn" onclick="hideProjectModal()">Close</button>
-  </div>
-</div>
-
-<section class="tutor">
-  <h2>SSD Careers</h2>
-  <div class="tutor-card">
-    <div class="tutor-info">
-      <h3>Join Our DevOps Tutor Team</h3>
-      <p>We’re hiring passionate DevOps tutors who want to train students in real-world tools & cloud workflows.</p>
-      <button class="btn" onclick="window.location.href='ssdblog-devops-email-times.html'">
-        Apply Now
-      </button>
-    </div>
-  </div>
-</section>
-
-<script src="script.js"></script>
-</body>
-</html>
+    // All enroll buttons
+    const enrollBtns = document.querySelecto
