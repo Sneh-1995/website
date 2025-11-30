@@ -9,7 +9,7 @@
     body{
       margin:0;
       font-family:'Roboto', Arial, sans-serif;
-      background:linear-gradient(135deg,#dbeafe,#60a5fa);;
+      background:linear-gradient(80deg, var(--blue1) 0%, var(--blue2)
       color:var(--ink);
     }
 
