@@ -7,10 +7,10 @@
     }
     *{box-sizing:border-box}
     body{
-      margin:0;
-      font-family:'Roboto', Arial, sans-serif;
-      background:linear-gradient(120deg, var(--blue1) 0%, var(--blue2) 100%);
-      color:var(--ink);
+          margin:0;
+          font-family:'Roboto', Arial, sans-serif;
+          background: url("bg_image.jpg.png");
+          color: var(--ink);
     }
 
     /* Header */
@@ -300,5 +300,6 @@
     background-color: #0044cc;
     transform: translateY(-2px);
 }
+
 
 
