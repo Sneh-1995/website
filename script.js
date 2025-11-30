@@ -40,3 +40,26 @@ window.addEventListener("click", function (e) {
     }
   });
 });
+// ---------------- Google Tag Coversion Function -------------
+function fireConversion() {
+  gtag('event', 'conversion', {
+    send_to: 'AW-17744245054/HddlCO-WxsUbEL7jjo1C'
+  });
+  console.log("🔥 Google Ads Conversion Fired");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  // Main CTA button
+  const mainBtn = document.querySelector(".aws-btn");
+  if (mainBtn) {
+    mainBtn.addEventListener("click", fireConversion);
+  }
+
+  // All enroll buttons
+  const enrollBtns = document.querySelectorAll(".enroll-btn");
+  enrollBtns.forEach(btn => {
+    btn.addEventListener("click", fireConversion);
+  });
+
+});
