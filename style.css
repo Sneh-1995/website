@@ -9,7 +9,7 @@
     body{
       margin:0;
       font-family:'Roboto', Arial, sans-serif;
-      background:linear-gradient(120deg, var(--blue1) 0%, var(--blue2) 100%);
+      background:linear-gradient(135deg,#dbeafe,#60a5fa);;
       color:var(--ink);
     }
 
@@ -300,3 +300,4 @@
     background-color: #0044cc;
     transform: translateY(-2px);
 }
+
