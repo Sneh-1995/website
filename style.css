@@ -7,11 +7,12 @@
     }
     *{box-sizing:border-box}
     body{
-          margin:0;
-          font-family:'Roboto', Arial, sans-serif;
-          background: url("bg_image.jpg.png");
-          color: var(--ink);
+    margin:0;
+    font-family:'Roboto', Arial, sans-serif;
+    background: url("bg_image.jpg.png");
+    color: var(--ink);
     }
+
 
     /* Header */
     header{
@@ -26,11 +27,13 @@
     }
     h1{
       font-family:'Montserrat', Arial, sans-serif;
-      font-size:2.6rem;
+      font-size:2.6 rem;
       margin:0 0 0.8rem 0;
       letter-spacing:1px;
+      text-shadow: 0 0 3px rgba(0, 0, 0, 0.589), 
+      0 0 6px rgba(0,0,0,0.35);
     }
-    .hook{font-size:1.3rem;margin:0.4rem 0 0.6rem 0}
+    .hook{font-size:1.3 rem;margin:0.4rem 0 0.6rem 0;  text-shadow: 0 0 1.5px rgba(0,0,0,0.30),0 0 3px rgba(0,0,0,0.25);}
     .subhook{color:#38435f;font-size:1.08rem;font-weight:500;margin:0}
 
     /* Hero media band right after header */
@@ -54,18 +57,20 @@
       display:flex;
       justify-content:flex-end;
     }
-    .hero-image img{
-      width:100%;
-      max-width:520px;
-      border-radius:18px;
-      box-shadow:0 6px 22px rgba(30,100,200,0.25);
-      object-fit:cover;
-      background:#e7f6fe;
+    .hero-image img {
+      width: 100%;
+      max-width: 520px;
+      border-radius: 18px;
+      box-shadow: 0 6px 22px rgba(30,100,200,0.25);
+      object-fit: cover;
+
+      background: transparent;      /* REMOVE the white background */
+      display: block;               /* prevents inline-gap issues */
     }
 
     /* Benefits */
     .benefits{
-      background:#fff;
+      background: #ADFF2F;
       border-radius:20px;
       box-shadow:0 2px 10px rgba(50,160,255,0.08);
       padding:1.7rem 1.2rem;
@@ -192,7 +197,7 @@
 
  /* About Myself Section */
 .tutor {
-  background: #ffffff;
+  background: linear-gradient(40deg, #87CEFA, #005A9C);
   padding: 2rem 1.2rem;
   max-width: 900px;
   margin: 2.5rem auto;
@@ -239,6 +244,48 @@
   border-radius: 50%;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
   background: #e7f6fe;
+}
+
+/* Career with us section */
+.careers {
+  background: linear-gradient(150deg, #87CEFA, #005A9C);;
+  padding: 2rem 1.2rem;
+  max-width: 900px;
+  margin: 2.5rem auto;
+  border-radius: 20px;
+  box-shadow: 0 3px 14px rgba(30, 100, 200, 0.1);
+}
+
+.careers-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  color: #1360b3;
+  text-align: center;
+}
+
+.careers-info {
+  flex: 1 1 60%;
+  font-size: 1rem;
+  color: #1e2a3a;
+}
+
+.careers-info h3 {
+  margin: 0.3rem 0 0.7rem 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #0f5489;
+}
+
+.careers-card {
+  display: flex;
+  justify-content: space-between; /* pushes image to the right */
+  align-items: flex-start;        /* keeps image aligned to top */
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 1000px;
+  margin: 40px auto;
 }
 
 /* Responsive layout tweak */
@@ -300,6 +347,3 @@
     background-color: #0044cc;
     transform: translateY(-2px);
 }
-
-
-
