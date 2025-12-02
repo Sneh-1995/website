@@ -219,7 +219,7 @@
       if (res.ok) {
         statusDiv.innerText = "Your enquiry has been submitted successfully we will contact you at short Notice!";
         statusDiv.style.color = "green";
-        form.reset();
+        window.location.href = "thank-you.html";
       } else {
         statusDiv.innerText = "Submission failed: " + text;
         statusDiv.style.color = "red";
@@ -238,3 +238,4 @@
   
 </body>
 </html>
+
