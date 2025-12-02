@@ -70,27 +70,28 @@
       gap: 44px;
     }
     .left-content {
-      flex: 2;
-      min-width: 300px;
-      background: #e0e7ff;
-      border-radius: 16px;
-      padding: 32px 32px 32px 32px;
-      box-shadow: 0 4px 12px rgba(30,58,138,.07);
-      margin-bottom: 30px;
+      padding: 20px;
+      background-color:linear-gradient(140deg, #054d8b 0%, #057cc6 100%); /* Keeping the blue background */
+      border-radius: 12px; /* Rounded corners */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+      backdrop-filter: blur(8px); /* Optional: add a slight blur to background for focus */
+      background-blend-mode: lighten;
     }
     .left-content img {
       width: 100%;
       max-width: 420px;
       border-radius: 10px;
-      margin-bottom: 18px;
+      margin: 0 auto 18px auto;
+      display: block;
     }
     .left-content h1 {
-      color: #2563eb;
-      margin-bottom: 16px;
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+      color: #FFFFFF; /* White text for good contrast with the blue background */
     }
     .left-content ul {
-      font-size: 18px;
-      color: #1e293b;
+      color: #E0E0E0; /* Light grey text for better readability while still being softer than white */
+      font-size: 1rem;
       margin: 14px 0 16px 18px;
     }
     .right-form {
@@ -252,6 +253,7 @@
   
 </body>
 </html>
+
 
 
 
