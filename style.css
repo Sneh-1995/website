@@ -27,14 +27,14 @@
     }
     h1{
       font-family:'Montserrat', Arial, sans-serif;
-      font-size:2.8em;
+      font-size:2.8rem;
       margin:0 0 0.8rem 0;
       letter-spacing:1px;
       text-shadow: 0 0 3px rgba(0, 0, 0, 0.589), 
       0 0 6px rgba(0,0,0,0.35);
     }
-    .hook{font-size:1.45em;margin:0.4rem 0 0.6rem 0;  text-shadow: 0 0 1.5px rgba(0,0,0,0.30),0 0 3px rgba(0,0,0,0.25);}
-    .subhook{color:#38435f;font-size:1.11em;font-weight:500;margin:0}
+    .hook{font-size:1.45rem;margin:0.4rem 0 0.6rem 0;  text-shadow: 0 0 1.5px rgba(0,0,0,0.30),0 0 3px rgba(0,0,0,0.25);}
+    .subhook{color:#38435f;font-size:1.11rem;font-weight:500;margin:0}
 
     /* Hero media band right after header */
     .hero-band{
@@ -347,5 +347,6 @@
     background-color: #0044cc;
     transform: translateY(-2px);
 }
+
 
 
