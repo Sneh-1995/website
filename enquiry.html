@@ -5,24 +5,12 @@
   <title>AWS Training & Cloud Career Enquiry</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="logo.png">
-
-  
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17744245054"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    // Global site tag
-    gtag('config', 'AW-17744245054');
-  </script>
   <style>
-    body {
-      background: url("bg_image.jpg.png");
-      font-family: 'Segoe UI', Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: url("bg_image.jpg.png");
+    body{
+    margin:0;
+    font-family:'Roboto', Arial, sans-serif;
+    background: url("bg_image.jpg.png");
+    color: var(--ink);
     }
     .header-banner {
       background: linear-gradient(90deg,#3b82f6 0%, #22d3ee 100%);
@@ -40,24 +28,21 @@
       margin-right: 6px;
     }
     .header-banner h1 {
-      font-size: 2.8rem;
+      font-size: 2.8em;
       font-weight: 700;
       margin: 0 0 12px 0;
       letter-spacing: 1px;
       color: #fff;
       display: inline-block;
-      text-shadow: 0 0 3px rgba(0, 0, 0, 0.589), 
-      0 0 6px rgba(0,0,0,0.35);
     }
     .header-banner .subtitle {
-      font-size: 1.45rem;
+      font-size: 1.45em;
       margin-bottom: 8px;
       color: #e0f2fe;
       font-weight: 400;
-       text-shadow: 0 0 1.5px rgba(0,0,0,0.30),0 0 3px rgba(0,0,0,0.25)
     }
     .header-banner .note {
-      font-size: 1.11rem;
+      font-size: 1.11em;
       margin-top: 9px;
       color: #f3fafc;
       display: block;
@@ -73,7 +58,7 @@
     }
     .left-content {
       padding: 20px;
-      background-color:linear-gradient(140deg, #054d8b 0%, #057cc6 100%); /* Keeping the blue background */
+      background-color:linear-gradient(140deg, #054d8b 50%, #057cc6 50%); /* Keeping the blue background */
       border-radius: 12px; /* Rounded corners */
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
       backdrop-filter: blur(1px); /* Optional: add a slight blur to background for focus */
@@ -173,7 +158,7 @@
         <li>1-Hour Cloud Computing Seminar: ₹99</li>
         <li>Internships & Job Support</li>
       </ul>
-      <span style="color:#1e40af;">Visit <a href="https://ssdblog.online" style="color:#2563eb;">ssdblog.online</a> for details</span>
+      <span style="color:#5d6ca1;">Visit <a href="https://ssdblog.online" style="color:#2563eb;">ssdblog.online</a> for details</span>
     </div>
     <div class="right-form">
       <h2>Enquiry Form</h2>
@@ -212,12 +197,14 @@
     submitBtn.disabled = true;
 
     const formData = new FormData(form);
+    const timestamp = new Date().toLocaleString();
     const row = [
       formData.get("name"),
       formData.get("phone"),
       formData.get("email"),
       formData.get("interest"),
-      formData.get("message")
+      formData.get("message"),
+      timestamp
     ];
 
     try {
@@ -236,7 +223,7 @@
       if (res.ok) {
         statusDiv.innerText = "Your enquiry has been submitted successfully we will contact you at short Notice!";
         statusDiv.style.color = "green";
-        window.location.href = "thank-you.html";
+        form.reset();
       } else {
         statusDiv.innerText = "Submission failed: " + text;
         statusDiv.style.color = "red";
@@ -255,11 +242,3 @@
   
 </body>
 </html>
-
-
-
-
-
-
-
-
