@@ -348,6 +348,66 @@
     transform: translateY(-2px);
 }
 
+/* Whatsapp button */
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  height: 55px;
+  width: 55px;                 /* icon only */
+  background: #25D366;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+  padding: 0;
+
+  overflow: hidden;
+  transition: width 0.25s ease;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+
+  z-index: 9999;
+}
+
+/* Expand container on hover */
+.whatsapp-btn:hover {
+  width: 120px;                /* space for text */
+  border-radius: 30px;
+  justify-content: flex-start;
+  padding-left: 10px;
+}
+
+/* Icon */
+.whatsapp-btn img {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+/* Text – completely hidden until hover */
+.wa-text {
+  color: #fff;
+  background: #25D366;         /* green pill */
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  white-space: nowrap;
+  position: absolute;
+
+  opacity: 0;
+  transform: translateX(10px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+
+}
 
 
-
+/* Text appears only on hover */
+.whatsapp-btn:hover .wa-text {
+  opacity: 1;
+  transform: translateX(0);
+}
