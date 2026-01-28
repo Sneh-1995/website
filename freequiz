@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SSD Blog Cloud Academy Assessment</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body{
+font-family:Arial, sans-serif;
+background:linear-gradient(to right,#0f2027,#203a43,#2c5364);
+margin:0;
+color:white;
+}
+
+/* COMMON */
+
+.hide{display:none;}
+
+button{
+background:#2563eb;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:6px;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{background:#1d4ed8;}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:20px;
+}
+
+/* ENQUIRY FORM */
+
+.form-card{
+background:#f1f5f9;
+color:black;
+padding:30px;
+border-radius:12px;
+box-shadow:0px 10px 25px rgba(0,0,0,0.3);
+}
+
+input,select,textarea{
+width:100%;
+padding:10px;
+margin-bottom:12px;
+border-radius:6px;
+border:1px solid #2563eb;
+}
+
+/* QUIZ */
+
+.quiz-card{
+background:white;
+color:black;
+border-radius:12px;
+padding:25px;
+box-shadow:0px 10px 25px rgba(0,0,0,0.4);
+}
+
+.option{
+background:#f2f2f2;
+padding:12px;
+margin:10px 0;
+border-radius:6px;
+cursor:pointer;
+border-left:5px solid #2c5364;
+}
+
+.option:hover{background:#d9ecff;}
+
+.timer{
+text-align:center;
+font-weight:bold;
+color:red;
+margin-bottom:10px;
+}
+
+.result-box{text-align:center;}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- ================= ENQUIRY FORM SECTION ================= -->
+
+<div id="enquirySection" class="form-card">
+
+<h2 style="text-align:center;color:#1d4ed8;">AWS Training & Cloud Career Enquiry</h2>
+
+<form id="enquiryForm">
+
+<input type="text" id="enq_name" placeholder="Full Name" required>
+<input type="email" id="enq_email" placeholder="Email" required>
+<input type="tel" id="enq_phone" placeholder="Phone" required>
+
+<select id="enq_interest" required>
+<option value="">Select Interest</option>
+<option>AWS Comprehensive Course</option>
+<option>AWS Express Batch</option>
+<option>Cloud Seminar</option>
+<option>Internship / Job Support</option>
+</select>
+
+<textarea id="enq_message" rows="3" placeholder="Your Query"></textarea>
+
+<button type="submit">Submit Enquiry & Start Free Assessment</button>
+
+</form>
+
+<div id="statusMsg"></div>
+
+</div>
+
+
+<!-- ================= QUIZ REGISTRATION ================= -->
+
+<div id="registerPage" class="quiz-card hide">
+
+<h2 style="text-align:center;">SSD Blog Cloud Academy</h2>
+
+<p style="text-align:center;">
+Career Readiness Assessment for AWS & DevOps Roles
+</p>
+
+<input id="studentName" placeholder="Full Name">
+<input id="studentCourse" placeholder="Graduation Course">
+<input id="studentField" placeholder="Field (AWS / Cloud / DevOps)">
+<input id="studentMobile" placeholder="Mobile Number">
+<input id="studentEmail" placeholder="Email">
+
+<center>
+<button onclick="startAssessment()">Start Assessment</button>
+</center>
+
+</div>
+
+
+<!-- ================= QUIZ PAGE ================= -->
+
+<div id="quizPage" class="quiz-card hide">
+
+<div class="timer" id="timer">Time Left: 20:00</div>
+
+<h2 id="question"></h2>
+<div id="options"></div>
+
+<center>
+<button onclick="nextQuestion()">Next</button>
+</center>
+
+</div>
+
+
+<!-- ================= RESULT PAGE ================= -->
+
+<div id="resultPage" class="quiz-card hide result-box">
+
+<h2>Assessment Completed Successfully</h2>
+
+<h3 id="scoreText"></h3>
+<h3 id="levelText"></h3>
+<p id="adviceText"></p>
+
+<hr>
+
+<h3>Thank You For Taking The Assessment</h3>
+<p>
+Visit our official website for training programs and career guidance:
+</p>
+
+<h3>
+<a href="https://ssdblog.info" target="_blank" style="color:#2563eb;text-decoration:none;">
+ssdblog.info
+</a>
+</h3>
+
+<button onclick="location.reload()">Take Again</button>
+
+</div>
+
+</div>
+
+<script>
+
+// ================= ENQUIRY FORM =================
+
+const form = document.getElementById("enquiryForm");
+const statusMsg = document.getElementById("statusMsg");
+
+form.addEventListener("submit", async function(e){
+
+e.preventDefault();
+
+const row = [
+document.getElementById("enq_name").value,
+document.getElementById("enq_phone").value,
+document.getElementById("enq_email").value,
+document.getElementById("enq_interest").value,
+document.getElementById("enq_message").value,
+new Date().toLocaleString()
+];
+
+try{
+
+const res = await fetch(
+"https://v1.nocodeapi.com/snehal_dhamdar/google_sheets/doPGVKHsClDTDPQN?tabId=Sheet1",
+{
+method:"POST",
+headers:{ "Content-Type":"application/json"},
+body:JSON.stringify([row])
+});
+
+if(res.ok){
+
+statusMsg.innerHTML = "<p style='color:green;'>Enquiry Submitted Successfully. Starting Assessment...</p>";
+
+setTimeout(()=>{
+document.getElementById("enquirySection").classList.add("hide");
+document.getElementById("registerPage").classList.remove("hide");
+},1500);
+
+}else{
+statusMsg.innerHTML="<p style='color:red;'>Submission Failed</p>";
+}
+
+}catch(err){
+statusMsg.innerHTML="<p style='color:red;'>Network Error</p>";
+}
+
+});
+
+
+// ================= QUIZ SYSTEM =================
+
+let studentData = {};
+
+function startAssessment(){
+
+studentData.name = studentName.value.trim();
+studentData.course = studentCourse.value.trim();
+studentData.field = studentField.value.trim();
+
+if(!studentData.name || !studentData.course || !studentData.field){
+alert("Please fill required fields");
+return;
+}
+
+registerPage.classList.add("hide");
+quizPage.classList.remove("hide");
+
+startTimer();
+loadQuestion();
+
+}
+
+let time = 1200;
+let timerInterval;
+
+function startTimer(){
+
+timerInterval = setInterval(()=>{
+
+let m=Math.floor(time/60);
+let s=time%60;
+
+timer.innerText=`Time Left: ${m}:${s<10?"0"+s:s}`;
+
+time--;
+
+if(time<0){
+clearInterval(timerInterval);
+showResult();
+}
+
+},1000);
+
+}
+
+const quizData = [
+
+{q:"Which resume strategy works best for AWS roles?",o:["Same resume","Tailored resume","Graphics","Long paragraphs"],a:1},
+{q:"DevOps transferable skill?",o:["Gaming","Automation mindset","Design","Video editing"],a:1},
+{q:"AWS EC2 is used for?",o:["Storage","Virtual servers","Database","Monitoring"],a:1},
+{q:"IAM is used for?",o:["Compute","Access control","Storage","Backup"],a:1},
+{q:"High availability achieved using?",o:["Single AZ","Multiple AZ","Local server","Laptop"],a:1}
+
+];
+
+let current=0;
+let score=0;
+
+function loadQuestion(){
+
+let q=quizData[current];
+
+question.innerText=(current+1)+". "+q.q;
+
+let html="";
+
+q.o.forEach((opt,i)=>{
+html+=`<div class="option" onclick="selectAnswer(${i})">${opt}</div>`;
+});
+
+options.innerHTML=html;
+
+}
+
+function selectAnswer(i){
+if(i===quizData[current].a) score++;
+nextQuestion();
+}
+
+function nextQuestion(){
+
+current++;
+
+if(current<quizData.length) loadQuestion();
+else showResult();
+
+}
+
+function showResult(){
+
+clearInterval(timerInterval);
+
+quizPage.classList.add("hide");
+resultPage.classList.remove("hide");
+
+let percent=(score/quizData.length)*100;
+
+scoreText.innerText=`Score: ${percent.toFixed(1)}%`;
+
+let level="", advice="";
+
+if(percent>=80){
+level="Career Ready Level";
+advice="You are ready to apply for AWS Cloud roles.";
+}
+else{
+level="Skill Improvement Needed";
+advice="Improve hands-on cloud skills and resume preparation.";
+}
+
+levelText.innerText=level;
+adviceText.innerText=advice;
+
+}
+
+</script>
+
+</body>
+</html>
