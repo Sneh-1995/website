@@ -63,3 +63,37 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
+// ---------- Free Quiz Popup Script ----------
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const freeQuizBtn = document.getElementById("freeQuizBtn");
+  const freeQuizModal = document.getElementById("freeQuizModal");
+  const quizClose = document.querySelector(".quiz-close");
+
+  if (freeQuizBtn && freeQuizModal && quizClose) {
+
+    freeQuizBtn.onclick = () => {
+      freeQuizModal.style.display = "block";
+      document.body.style.overflow = "hidden";
+    };
+
+    quizClose.onclick = () => {
+      freeQuizModal.style.display = "none";
+      document.body.style.overflow = "";
+    };
+
+    // Click outside popup to close
+    window.addEventListener("click", function (e) {
+      if (e.target === freeQuizModal) {
+        freeQuizModal.style.display = "none";
+        document.body.style.overflow = "";
+      }
+    });
+
+  }
+
+});
+
+
