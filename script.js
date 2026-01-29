@@ -96,4 +96,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+function openFreeQuiz(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("quizName").value;
+  const email = document.getElementById("quizEmail").value;
+
+  // Redirect with data
+  window.location.href =
+    "freequiz.html?name=" +
+    encodeURIComponent(name) +
+    "&email=" +
+    encodeURIComponent(email);
+}
+
+
 
