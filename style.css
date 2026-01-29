@@ -411,3 +411,82 @@
   opacity: 1;
   transform: translateX(0);
 }
+
+/* Free Quiz Floating Button */
+#freeQuizBtn {
+  position: fixed;
+  right: 20px;
+  top: 42%;
+  background: #ff7a18;
+  color: white;
+  border: none;
+  padding: 14px 22px;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  z-index: 9999;
+}
+
+#freeQuizBtn:hover {
+  background: #ff5c00;
+}
+
+/* Quiz Popup Background */
+.quiz-modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+/* Popup Box */
+.quiz-modal-content {
+  background: white;
+  max-width: 400px;
+  width: 90%;
+  padding: 25px;
+  border-radius: 12px;
+  margin: 10% auto;
+  text-align: center;
+  position: relative;
+}
+
+/* Close Button */
+.quiz-close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Form */
+.quiz-modal-content input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.quiz-modal-content button {
+  width: 100%;
+  padding: 10px;
+  background: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.quiz-modal-content button:hover {
+  background: #084298;
+}
+
